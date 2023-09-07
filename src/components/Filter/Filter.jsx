@@ -1,4 +1,6 @@
-export const Filter = ({filter, filterInput}) => (
+
+
+export const Filter = ({ filter, filterInput }) => (
     <label>
         <input
             type="text"
