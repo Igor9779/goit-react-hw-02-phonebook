@@ -1,11 +1,12 @@
+import { FilterContainer, FilterInput } from "./Filter.styled";
 
 
 export const Filter = ({ filter, filterInput }) => (
-    <label>
-        <input
+    <FilterContainer>
+        <FilterInput
             type="text"
             name={filter}
             onChange={filterInput}
         />
-    </label>
+    </FilterContainer>
 )

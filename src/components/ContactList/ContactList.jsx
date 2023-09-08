@@ -1,21 +1,22 @@
+import { ContactInfo, ContactItem, ContactListContainer, DeleteButton } from "components/ContactList/ContactList.styed"
 
 
 export const ContactList = ({contacts, deleteContact}) => (
-    <ul>
+    <ContactListContainer>
         {contacts.map(({ id, name, number }) => {
             return (
-                <li key={id}>
-                    <p>
+                <ContactItem key={id}>
+                    <ContactInfo>
                         {name}:{number}
-                    </p>
-                    <button
+                    </ContactInfo>
+                    <DeleteButton
                         type="button"
                         onClick={() => deleteContact(id)}
                     >
                         Delete contact
-                    </button>
-                </li>
+                    </DeleteButton>
+                </ContactItem>
         )
         })}
-    </ul>
+    </ContactListContainer>
 )

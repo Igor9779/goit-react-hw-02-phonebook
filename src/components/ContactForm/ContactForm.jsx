@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Button, Form, Input } from "./ContactForm.styled";
 
 export class ContactForm extends Component {
     state = { name: '', number: '' }
@@ -17,8 +18,8 @@ export class ContactForm extends Component {
     render() { 
         const { name, number } = this.state;
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input
+            <Form onSubmit={this.handleSubmit}>
+                <Input
                     type="text"
                     name="name"
                     value={name}
@@ -27,7 +28,7 @@ export class ContactForm extends Component {
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     required
                 />
-                <input
+                <Input
                     type="tel"
                     name="number"
                     value={number}
@@ -36,8 +37,8 @@ export class ContactForm extends Component {
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required
                 />
-                <button type="submit">Add contact</button>
-            </form>
+                <Button type="submit">Add contact</Button>
+            </Form>
         );
     }
 }
